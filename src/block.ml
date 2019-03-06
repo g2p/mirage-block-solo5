@@ -124,3 +124,8 @@ let read x sector_start buffers =
   do_read offset buffers
 
 let get_info t = Lwt.return t.info
+
+let discard _ = failwith "Not implemented"
+
+let barrier ?durable:_ _ = failwith "Not implemented"
+
